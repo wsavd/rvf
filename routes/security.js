@@ -12,8 +12,6 @@ securityRoutes.use(function(req, res, next) {
 
 	// decode token
 	if (token) {
-    	res.send("we have token")
-    /*
 		// verifies secret and checks exp
 		jwt.verify(token, process.env.SECRET_KEY, function(err, decoded) {			
 			if (err) {
@@ -24,12 +22,7 @@ securityRoutes.use(function(req, res, next) {
 				next();
 			}
 		});
-		*/
 	} else {
-		res.send("no token");
-	}
-});
-/*
 		// if there is no token
 		// return an error
 		return res.status(403).send({ 
@@ -37,6 +30,7 @@ securityRoutes.use(function(req, res, next) {
 			message: 'No token provided.'
 		});
 		
-	}*/
+	}
+});
 
 module.exports = securityRoutes;

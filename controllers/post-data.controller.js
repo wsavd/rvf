@@ -7,7 +7,7 @@ module.exports.post = function(req, res) {
 		if(err) {
 			res.send(err);
 		} else {
-		    res.send("fdbd");
+		    res.send("we have a new person");
         }
     });
   };
